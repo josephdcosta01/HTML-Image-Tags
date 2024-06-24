@@ -10,14 +10,16 @@ src - Specifies the path to the image
 alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed
 Note: Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.
 
+The above example shows usage of the <img> element:
 
+The src attribute is required, and contains the path to the image you want to embed.
+The alt attribute holds a textual replacement for the image, which is mandatory and incredibly useful for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
 
-How to create an image map, with clickable regions. Each region is a hyperlink:
-<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+If an error occurs while loading or rendering an image, and an onerror event handler has been set for the error event, that event handler will get called. This can happen in several situations, including:
 
-<map name="workmap">
-  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
-</map>
-
+The src attribute is empty ("") or null.
+The src URL is the same as the URL of the page the user is currently on.
+The image is corrupted in some way that prevents it from being loaded.
+The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the <img> element's attributes.
+The image is in a format not supported by the user agent.
+Attributes
