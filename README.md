@@ -11,8 +11,8 @@ alt - Specifies an alternate text for the image, if the image for some reason ca
 Note: Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.
 
 
-How to create an image map, with clickable regions. Each region is a hyperlink:
 
+How to create an image map, with clickable regions. Each region is a hyperlink:
 <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
 
 <map name="workmap">
